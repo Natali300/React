@@ -1,14 +1,21 @@
-import UserCard from './components/UserCard';
+import BookCard from "./components/BookCard";
+import coverImage from './assets/маленькая женщина.webp';
+import coverImage1 from './assets/приключение .jpg';
 function App(){
   return(
     <div>
-      <h1>профиль</h1>
-      <UserCard
-      name="jhon"
-      city="ростов на дону"
-      avatar="https://i.pravatar.cc/100?u=jhon"
-      />
+    <h1>Книги</h1>
+    <BookCard
+    name="Маленькие женщины"
+    avtor="Луиза Мэй Олкотт"
+    cover={coverImage}
+ />
+ <BookCard
+    name="Приключение Макса и его верных друзей"
+    avtor="Марина Голомидова"
+    cover={coverImage1}
+ />
     </div>
   );
 }
-export default App;// нужно обязательно прописывать
+export default App;
