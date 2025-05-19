@@ -1,21 +1,30 @@
-import BookCard from "./components/BookCard";
-import coverImage from './assets/маленькая женщина.webp';
-import coverImage1 from './assets/приключение .jpg';
-function App(){
-  return(
+import './App.css'
+import React, {useState} from 'react';
+//
+//
+//
+
+
+function App() {
+  const [cartItems, setCartItems] = useState([]);
+  const addToCart = (book) => {
+    setCartItems((prevItems) =>{
+      const existingItem = prevItems.find((item) => item.id === book.id);
+      if(existingItem){
+        return prevItems.map((item) => 
+        item.id === book.id ? {...item, quantity: item.quantity +1}: item  )
+      }else{
+        return[...prevItems, {...book, quantity: 1}];
+      }
+
+    });
+  };
+
+  return (
     <div>
-    <h1>Книги</h1>
-    <BookCard
-    name="Маленькие женщины"
-    avtor="Луиза Мэй Олкотт"
-    cover={coverImage}
- />
- <BookCard
-    name="Приключение Макса и его верных друзей"
-    avtor="Марина Голомидова"
-    cover={coverImage1}
- />
+      <h1 style={{textAlign:'center'}}>книжный магазин</h1>
     </div>
-  );
-}
-export default App;
+
+  )}
+   
+export default App
