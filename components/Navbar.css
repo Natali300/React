@@ -1,0 +1,30 @@
+.navbar {
+    background-color: rgb(234, 223, 196);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 40px;
+    box-shadow: 0 2px 4px rgb(0,0,0,0.1);
+    font-family: Arial, sans-serif;
+}
+.logo{
+    font-size: 24px;
+    font-weight: bold;
+    color: rgb(72, 47, 15);
+}
+.nav-links{
+    list-style: none;
+    display: flex;
+    gap: 24px;
+}
+.nav-links li  {
+    text-decoration: none;
+    color: #5b4636;
+    font-size: 18px;
+    display: flex;
+    align-items: center;
+    height: 100%;
+}
+.nav-links li:hover {
+    text-decoration: underline;
+}
